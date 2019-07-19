@@ -22,6 +22,8 @@
     <modules>
         <module>eureka-server</module>
         <module>eureka-client</module>
+        <module>service-feign</module>
+        <module>service-zuul</module>
     </modules>
 
     <!--基础配置-->

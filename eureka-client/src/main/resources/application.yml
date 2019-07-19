@@ -1,12 +1,11 @@
-server:
-  port: 8763
-
 spring:
+  profiles:
+    active: 8763
   application:
     name: service-hi
 
 eureka:
   client:
     serviceUrl:
-      # ÉèÖÃÓëEureka Server½»»¥µÄµØÖ·£¬²éÑ¯·şÎñºÍ×¢²á·şÎñ¶¼ĞèÒªÒÀÀµÕâ¸öµØÖ·¡£Ä¬ÈÏÊÇhttp://localhost:8761/eureka/£¬¶à¸öµØÖ·ÓÃ,·Ö¸ô
+      # è®¾ç½®ä¸Eureka Serveräº¤äº’çš„åœ°å€ï¼ŒæŸ¥è¯¢æœåŠ¡å’Œæ³¨å†ŒæœåŠ¡éƒ½éœ€è¦ä¾èµ–è¿™ä¸ªåœ°å€ã€‚é»˜è®¤æ˜¯http://localhost:8761/eureka/ï¼Œå¤šä¸ªåœ°å€ç”¨,åˆ†éš”
       defaultZone: http://localhost:8761/eureka/

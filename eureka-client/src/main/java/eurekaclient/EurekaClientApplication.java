@@ -22,7 +22,7 @@ public class EurekaClientApplication {
     String port;
 
     @GetMapping("/hi")
-    public String hi(@RequestParam(value = "name", defaultValue = "hgf") String name) {
+    public String hi(@RequestParam(value = "name") String name) {
         return "name:" + name + ",port:" + port;
     }
 }

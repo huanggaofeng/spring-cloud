@@ -11,10 +11,10 @@
 
     <!--本模块基本信息-->
     <groupId>com.hgf</groupId>
-    <artifactId>service-feign</artifactId>
+    <artifactId>service-zuul</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>service-feign</name>
-    <description>service-feign</description>
+    <name>service-zuul</name>
+    <description>service-zuul</description>
 
     <!--本模块依赖-->
     <dependencies>
@@ -28,8 +28,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
     </dependencies>
-
 </project>

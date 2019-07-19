@@ -10,6 +10,7 @@
     </parent>
 
     <!--本模块基本信息-->
+    <groupId>com.hgf</groupId>
     <artifactId>eureka-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>eureka-client</name>

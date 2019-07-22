@@ -1,0 +1,16 @@
+#server:
+#  port: 8766
+#
+#spring:
+#  application:
+#    name: service-feign
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        # 从配置中心读取文件
+        enabled: true
+        # 配置中心的servieId，即服务名。
+        # 所以最后会找到master下service-feign-dev
+        serviceId: service-feign

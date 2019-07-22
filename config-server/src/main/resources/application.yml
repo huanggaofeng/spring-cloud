@@ -1,0 +1,24 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          # 配置git仓库地址
+          uri: https://github.com/huanggaofeng/spring-cloud-config/
+          # 配置仓库路径
+          searchPaths:
+          # 如果Git仓库为公开仓库，可以不填写用户名和密码，如果是私有仓库需要填写
+          # 访问git仓库的用户名
+          username:
+          # 访问git仓库的用户密码
+          password:
+      label: master
+eureka:
+  client:
+    serviceUrl:
+      # 设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址。默认是http://localhost:8761/eureka/，多个地址用,分隔
+      defaultZone: http://localhost:8761/eureka/

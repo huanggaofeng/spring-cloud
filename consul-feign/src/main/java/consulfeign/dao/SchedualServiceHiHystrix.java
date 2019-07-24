@@ -1,4 +1,4 @@
-package servicefeign.dao;
+package consulfeign.dao;
 
 import feign.hystrix.FallbackFactory;
 import org.slf4j.Logger;

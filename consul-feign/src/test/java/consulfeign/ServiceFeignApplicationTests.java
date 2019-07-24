@@ -1,4 +1,4 @@
-package servicefeign;
+package consulfeign;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

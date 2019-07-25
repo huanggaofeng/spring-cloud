@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: service-gateway
+  cloud:
+    consul:
+      discovery:
+        #注册到consul的服务名称
+        serviceName: service-gateway
+      host: localhost
+      port: 8500
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: route-service-1
+        # uri以lb://开头（lb代表从注册中心获取服务），后面接的就是需要转发到的服务名称
+        uri: lb://consul-feign
+        predicates:
+        # 匹配路径 所以实际访问路径为consul-feign/hi
+        - Path=/hi
+      - id: route-service-2
+        # uri以lb://开头（lb代表从注册中心获取服务），后面接的就是需要转发到的服务名称
+        uri: lb://consul-feign
+        predicates:
+        # 匹配路径 /api/hi   =====>consul-feign/hi
+        - Path=/api/{path}
+        filters:
+        - SetPath=/{path}
+server:
+  port: 8780

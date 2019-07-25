@@ -27,6 +27,7 @@
         <module>config-server</module>
         <module>server-consul</module>
         <module>consul-feign</module>
+        <module>service-gateway</module>
     </modules>
 
     <!--基础配置-->
